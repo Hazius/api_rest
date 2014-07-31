@@ -1,15 +1,18 @@
-﻿* REST HTTP API
+﻿
+* REST HTTP API
 
-Реализация REST HTTP API описанный в документации
+Реализация REST HTTP API описанный в документации:
 http://docs.notesapitest.apiary.io/
 
-База данных: SQLite
+База данных: SQLite.
 
 Логика обработки запросов: в контроллере NotesController.
 
+Все ответы сервер формирует и присылает в формате json.
+
 * CORS
 
-Для реализации CORS используется gem 'rack-cors'. 
+Для реализации CORS используется gem 'rack-cors'.
 config/application.rb
 
 module this_app
@@ -25,7 +28,7 @@ module this_app
   end
 end
 
-* Проверка на работоспособность
+* ПРОВЕРКА НА РАБОТОСПОСОБНОСТЬ
 
 Для проверки работоспособности использовался gem 'rest-client'.
 Реализация методов для проверки в lib/MyRestClient.rb
