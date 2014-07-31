@@ -29,7 +29,7 @@ class NotesController < ApplicationController
   # DELETE /notes/1.json
   def destroy
     @note.destroy
-    respond_to do |format|
+    respond_to do |format|git 
       format.json { head :no_content }
     end
   end
