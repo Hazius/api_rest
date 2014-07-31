@@ -20,6 +20,8 @@ group :production do
 	gem 'rails_12factor', '0.0.2'
 end
 
+gem 'rack-cors', require: 'rack/cors'
+gem 'rest-client'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'json', '1.8.1'

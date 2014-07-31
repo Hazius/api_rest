@@ -1,28 +1,35 @@
-== README
+*****************
+* REST HTTP API
+*****************
+Реализация REST HTTP API описанный в документации
+http://docs.notesapitest.apiary.io/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+База данных: SQLite
 
-Things you may want to cover:
+Логика обработки запросов: в контроллере NotesController.
 
-* Ruby version
+*****************
+* CORS
+*****************
+Для реализации CORS используется gem 'rack-cors'.
+---------------------
+config/application.rb
+---------------------
+module this_app
+  class Application < Rails::Application
+    # ...
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :delete]
+      end
+    end
+    # ...
+  end
+end
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*****************
+* Проверка на работоспособность
+*****************
+Для проверки работоспособности использовался gem 'rest-client'.
+Реализация методов для проверки в lib/MyRestClient.rb

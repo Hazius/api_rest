@@ -1,4 +1,5 @@
-json.array!(@notes) do |note|
-  json.extract! note, :title
-  json.url note_url(note, format: :json)
+json.notes do
+  json.array!(@notes) do |note|
+    json.extract! note, :id, :title, :created_at
+  end
 end
