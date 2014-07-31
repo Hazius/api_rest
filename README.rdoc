@@ -1,5 +1,4 @@
-
-* REST HTTP API
+﻿* REST HTTP API
 
 Реализация REST HTTP API описанный в документации
 http://docs.notesapitest.apiary.io/
@@ -12,6 +11,7 @@ http://docs.notesapitest.apiary.io/
 
 Для реализации CORS используется gem 'rack-cors'. 
 config/application.rb
+
 module this_app
   class Application < Rails::Application
     # ...
